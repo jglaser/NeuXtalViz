@@ -1,6 +1,5 @@
 import argparse
 
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -16,6 +15,10 @@ def main():
             from NeuXtalViz.qt.gui import gui
             gui()
         case "trame":
+            # fix a crash for headless mode
+            import pyvista
+            pyvista.start_xvfb()
+
             from NeuXtalViz.trame.gui import trame
             trame()
 
