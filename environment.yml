@@ -28,3 +28,5 @@ dependencies:
     - pyqt5
     - trame-matplotlib
     - trame-vtk
+    - google-generativeai
+
